@@ -2,8 +2,13 @@ import React from 'react';
 
 const Content: React.FC = () => {
   return (
-    <main className="w-full flex-1 bg-yellow-100 border-2 border-yellow-300 border-dashed flex items-center justify-center">
-      <h2 className="text-yellow-600 text-lg font-semibold">Content Component</h2>
+    <main 
+      className="bg-white flex-1 flex items-center justify-center border-2 border-gray-200"
+      style={{
+        minHeight: '41.5rem'
+      }}
+    >
+      <h2 className="text-3xl font-bold text-gray-700">Content Area</h2>
     </main>
   );
 };
