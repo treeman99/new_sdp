@@ -57,7 +57,6 @@ const HeaderGnb: React.FC<HeaderGnbProps> = ({
             <div
               style={{
                 display: 'flex',
-                paddingBottom: hasDropdown ? '0.125rem' : '0.25rem',
                 alignItems: 'center',
                 gap: '0.625rem',
                 color: textColor,
@@ -81,7 +80,7 @@ const HeaderGnb: React.FC<HeaderGnbProps> = ({
               >
                 {text}
               </div>
-            </div>
+            
             {hasDropdown && (
               <div
                 style={{
@@ -139,6 +138,7 @@ const HeaderGnb: React.FC<HeaderGnbProps> = ({
                 </div>
               </div>
             )}
+            </div>
           </div>
         </div>
       </div>

@@ -1,7 +1,12 @@
 import React from 'react';
 import LogoTanent from './LogoTanent';
 
-const LogoSection: React.FC = () => {
+interface LogoSectionProps {
+  selectedTenant: string;
+  onTenantChange: (tenant: string) => void;
+}
+
+const LogoSection: React.FC<LogoSectionProps> = ({ selectedTenant, onTenantChange }) => {
   return (
     <div
       style={{
@@ -10,7 +15,10 @@ const LogoSection: React.FC = () => {
       }}
     >
       {/* LogoTanent 컴포넌트 */}
-      <LogoTanent />
+      <LogoTanent 
+        selectedTenant={selectedTenant}
+        onTenantChange={onTenantChange}
+      />
     </div>
   );
 };

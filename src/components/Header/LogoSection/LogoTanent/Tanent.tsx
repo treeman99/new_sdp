@@ -1,15 +1,28 @@
 import React from 'react';
+import Dropdown from '../../Dropdown';
 
-const Tanant: React.FC = () => {
-  return (
-    <button 
+interface TanentProps {
+  selectedTenant: string;
+  onTenantChange: (tenant: string) => void;
+}
+
+const Tanent: React.FC<TanentProps> = ({ selectedTenant, onTenantChange }) => {
+  const dropdownItems = [
+    'SENSDES-RND',
+    'Project Name',
+    'SENSER Test Chip',
+    'Megabox',
+    'CGV'
+  ];
+
+  const trigger = (
+    <div 
       style={{
         display: 'flex',
         height: '2.5rem',
         alignItems: 'center',
         borderRadius: '0.125rem',
         background: 'transparent',
-        border: 'none',
         cursor: 'pointer',
         padding: '0'
       }}
@@ -61,7 +74,7 @@ const Tanant: React.FC = () => {
                 letterSpacing: '0.05rem'
               }}
             >
-              SENSDES-RND
+              {selectedTenant}
             </div>
           </div>
           
@@ -111,8 +124,19 @@ const Tanant: React.FC = () => {
           </div>
         </div>
       </div>
-    </button>
+    </div>
+  );
+
+  return (
+    <Dropdown
+      selectedValue={selectedTenant}
+      options={dropdownItems}
+      onSelectionChange={onTenantChange}
+      trigger={trigger}
+      position="bottom-overlap"
+      width="10rem"
+    />
   );
 };
 
-export default Tanant;
+export default Tanent;

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LogoSection from './LogoSection';
 import Divider from './Divider';
 import Gnb from './LogoSection/Gnb';
 import HeaderUtility from './HeaderUtility';
 
 const Header: React.FC = () => {
+  const [selectedTenant, setSelectedTenant] = useState('SENSDES-RND');
+
   return (
     <header
       style={{
@@ -19,7 +21,10 @@ const Header: React.FC = () => {
       }}
     >
       {/* 로고 섹션 */}
-      <LogoSection />
+      <LogoSection 
+        selectedTenant={selectedTenant}
+        onTenantChange={setSelectedTenant}
+      />
 
       {/* 구분선 */}
       <Divider />

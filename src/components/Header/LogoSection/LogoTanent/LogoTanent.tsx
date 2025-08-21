@@ -1,8 +1,13 @@
 import React from 'react';
 import Logo from './Logo';
-import Tanant from './Tanant';
+import Tanent from './Tanent';
 
-const LogoTanent: React.FC = () => {
+interface LogoTanentProps {
+  selectedTenant: string;
+  onTenantChange: (tenant: string) => void;
+}
+
+const LogoTanent: React.FC<LogoTanentProps> = ({ selectedTenant, onTenantChange }) => {
   return (
     <div
       style={{
@@ -13,8 +18,11 @@ const LogoTanent: React.FC = () => {
       {/* Logo 컴포넌트 */}
       <Logo />
 
-      {/* Tanant 컴포넌트 */}
-      <Tanant />
+      {/* Tanent 컴포넌트 */}
+      <Tanent 
+        selectedTenant={selectedTenant}
+        onTenantChange={onTenantChange}
+      />
     </div>
   );
 };
