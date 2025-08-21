@@ -34,7 +34,7 @@ const Utility: React.FC<UtilityProps> = ({
 
   return (
     <div 
-      className="flex items-center cursor-pointer"
+      className="flex items-start cursor-pointer"
       style={{ gap: hasGap ? '-0.375rem' : '0' }}
       onClick={handleClick}
     >
