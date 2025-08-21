@@ -1,1 +1,3 @@
-export { default } from './HeaderUtility';
+import HeaderUtility from './HeaderUtility';
+
+export default HeaderUtility;

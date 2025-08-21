@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer 
+    <footer
       className="bg-gray-700 text-white flex items-center justify-center"
       style={{
-        height: '4rem'
+        height: '4rem',
       }}
     >
       <p className="text-lg">Footer</p>

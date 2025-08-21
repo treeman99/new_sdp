@@ -1,56 +1,24 @@
 import React from 'react';
+import HeaderGnb from './HeaderGnb';
 
 const Gnb: React.FC = () => {
   return (
-    <div 
+    <div
       style={{
         display: 'flex',
         paddingLeft: '0.25rem',
-        alignItems: 'center'
+        alignItems: 'center',
+        gap: '1rem',
       }}
     >
-      {/* GNB 메뉴 아이템들 */}
-      <nav 
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '1rem'
-        }}
-      >
-        <a 
-          href="#" 
-          style={{
-            color: '#FFFFFF',
-            textDecoration: 'none',
-            fontSize: '0.875rem',
-            padding: '0.5rem 0.75rem'
-          }}
-        >
-          Menu 1
-        </a>
-        <a 
-          href="#" 
-          style={{
-            color: '#EDF2F4',
-            textDecoration: 'none',
-            fontSize: '0.875rem',
-            padding: '0.5rem 0.75rem'
-          }}
-        >
-          Menu 2
-        </a>
-        <a 
-          href="#" 
-          style={{
-            color: '#EDF2F4',
-            textDecoration: 'none',
-            fontSize: '0.875rem',
-            padding: '0.5rem 0.75rem'
-          }}
-        >
-          Menu 3
-        </a>
-      </nav>
+      {/* My Task - 선택됨, 드롭다운 없음 */}
+      <HeaderGnb text="My Task" isSelected={true} hasDropdown={false} />
+
+      {/* Management - 드롭다운 있음 */}
+      <HeaderGnb text="Management" hasDropdown={true} />
+
+      {/* Test Design - 드롭다운 있음 */}
+      <HeaderGnb text="Test Design" hasDropdown={true} />
     </div>
   );
 };

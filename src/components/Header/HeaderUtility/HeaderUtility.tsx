@@ -1,63 +1,30 @@
 import React from 'react';
+import Menu from './Menu';
+import Divider from '../Divider';
+import Profile from './Profile';
+import Confidential from './Confidential';
 
 const HeaderUtility: React.FC = () => {
   return (
-    <div 
+    <div
       style={{
         display: 'flex',
         justifyContent: 'flex-end',
         alignItems: 'center',
-        flex: '1 0 0'
+        flex: '1 0 0',
       }}
     >
-      {/* Ghost 버튼 */}
-      <button 
-        style={{
-          background: 'transparent',
-          border: 'none',
-          color: '#F3F6F8',
-          padding: '0.5rem 1rem',
-          fontSize: '0.875rem',
-          cursor: 'pointer',
-          marginRight: '0.5rem'
-        }}
-      >
-        Menu
-      </button>
+      {/* 1. Menu */}
+      <Menu />
       
-      {/* 알림 버튼 */}
-      <button 
-        style={{
-          background: '#F73529',
-          border: 'none',
-          color: '#FFFFFF',
-          padding: '0.5rem 1rem',
-          borderRadius: '0.25rem',
-          fontSize: '0.875rem',
-          cursor: 'pointer',
-          marginRight: '0.5rem'
-        }}
-      >
-        Alert
-      </button>
+      {/* 2. Divider */}
+      <Divider />
       
-      {/* 사용자 프로필 */}
-      <div 
-        style={{
-          background: '#FFFFFF',
-          borderRadius: '50%',
-          width: '2rem',
-          height: '2rem',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: '#515E94',
-          fontWeight: 'bold',
-          fontSize: '0.875rem'
-        }}
-      >
-        U
-      </div>
+      {/* 3. Profile */}
+      <Profile />
+      
+      {/* 4. Confidential */}
+      <Confidential />
     </div>
   );
 };

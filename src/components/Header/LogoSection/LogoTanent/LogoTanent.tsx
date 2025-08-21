@@ -4,15 +4,15 @@ import Tanant from './Tanant';
 
 const LogoTanent: React.FC = () => {
   return (
-    <div 
+    <div
       style={{
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
       }}
     >
       {/* Logo 컴포넌트 */}
       <Logo />
-      
+
       {/* Tanant 컴포넌트 */}
       <Tanant />
     </div>
